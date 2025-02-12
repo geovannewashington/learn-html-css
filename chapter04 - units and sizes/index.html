@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units and Sizes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--rem is a relative font-size unit and it's relative to the root's (html) font-size element-->
+    <p>this is a 2rem paragraph and it's size should be identical to the next one</p>
+    <p style="font-size: 32px;">this is a 32px paragraph and it's size should be identical to the previous one</p>
+    
+    <p class="warning"  class="random-p">
+        <strong>NOTE:</strong>
+        If, however, the client has their default font size increased or decreased in their browser settings, 
+        the two paragraphs' sizes might be different.
+    </p>
+    
+    <!--em, on the other hand, is relative to the font's size of it's nearest parent-->
+    <div style="font-size: 10px;">
+        <!--2em here = 20px-->
+        <p class="random-p-2"> 
+            this paragraph is 2em, and is within a div with a font size of 10px, which
+            means that this paragraph will be the same size of the following one
+        </p>
+        
+        <p style="font-size: 20px;">
+            this is a paragraph with 20px size, and it's size should be identical to the the 
+            previous one
+        </p>
+    </div>
+</body>
+</html>
