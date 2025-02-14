@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing the viewport horizontal overflow issue</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #big-div {
+            color: white;
+            background-color: darkblue;
+            width: 100%; /* Using percentage in the width we got rid of the bottom horizontal scrollbar */
+            height: 100vh; 
+
+            /* If we had used percentage instead of vw and vh we wouldn't 
+            have those scrollbars, I'm assuming*/        
+        }
+    </style>
+</head>
+<body>
+    <div style="font-size: 32px;">
+        <p>The default font-size of an h1 is 2em, so in most cases it's 32px</p>
+        <h1>however, this should be 64px large, since it's inside of a div whose font-size is set to 32px</h1>
+        <hr>
+        <strong>
+            <p style="font-size: 64px;">
+                here's a 64px strong paragraph for terms of comparison
+            </p>
+        </strong>
+    </div>
+
+
+    <div id="big-div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, at.</p>
+    </div>
+</body>
+</html>
