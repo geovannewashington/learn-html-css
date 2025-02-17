@@ -1,0 +1,12 @@
+body {
+        padding: 10%;
+        font-size: 2rem;
+}
+
+button {
+        font-size: inherit;
+}
+
+button:hover {
+        cursor: pointer;
+}
