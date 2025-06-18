@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--This paragraph element will be rendered as a single line.-->
+    <p class="p">
+    This
+    paragraph 
+    contains
+    some
+    line breaks
+
+
+
+    a lot of 
+    whitespaces.
+    </p>
+    
+    <script>
+        const p1 = document.querySelector('.p').innerHTML;
+        // this log will have line breaks and all whitespaces
+        console.log(p1);
+    </script>
+</body>
+
+</html>
