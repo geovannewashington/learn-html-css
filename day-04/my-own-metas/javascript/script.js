@@ -1,6 +1,6 @@
 'use strict'
 
-//  TODO: how to style the html select element
+//  TODO: maybe it's possible to apply a smoth transition between the themes
 
 // white by default
 const selectElement = document.querySelector('select'); 
@@ -27,15 +27,13 @@ function setTheme(theme) {
     // value to white
     if (theme === 'white') {
         document.querySelector(`meta[name="tpose:theme"]`).content = theme; 
-        document.body.style.background = "";
-        section.style.background = "";
-        section.style.color = "";
-        section.style.borderColor = "";
+        document.body.classList.remove("dark-theme-bg");
+        section.classList.remove("dark-theme-bg");
+        selectElement.classList.remove("dark-theme-bg");
     } else {
         document.querySelector(`meta[name="tpose:theme"]`).content = theme; 
-        document.body.style.background = "var(--dark-bg-color)";
-        section.style.background = "var(--dark-fg-color)";
-        section.style.color = "var(--dark-txt-color)";
-        section.style.borderColor = "var(--dark-border-color)";
+        document.body.classList.add("dark-theme-bg");
+        section.classList.add("dark-theme-bg");
+        selectElement.classList.add("dark-theme-bg");
     }
 }
