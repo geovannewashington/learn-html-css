@@ -1,0 +1,48 @@
+:root {
+    /********************************/
+    /* WHITE THEME COLORS (default) */
+    /********************************/
+    --white-bg-color: #FFF;
+    --white-fg-color: #F9F9FB;
+    --white-border-color: #CDCDCD;
+    --white-txt-color: #1B1B1B;
+
+    /*********************/
+    /* DARK THEME COLORS */
+    /*********************/
+    --dark-bg-color: #1B1B1B;
+    --dark-fg-color: #313131;
+    --dark-border-color: #858585;
+    --dark-txt-color: #FFF;
+}
+
+/* BASIC CSS RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--white-bg-color);
+    color: var(--white-txt-color);
+}
+
+#display-theme {
+    background-color: var(--white-fg-color);
+    border: 1px solid var(--white-border-color);
+    border-radius: 5px;
+    width: 800px;
+    margin: 20px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+#display-theme h1 {
+    margin-bottom: 30px;
+}
